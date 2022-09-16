@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+body{
+    background-image: radial-gradient(circle at 50% -20.71%, #e6f58f 0, #e9eb7f 10%, #ecdf6e 20%, #efd25d 30%, #f1c44d 40%, #f2b53c 50%, #f3a52d 60%, #f59522 70%, #f8851d 80%, #fa741e 90%, #fc6324 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+form{
+    width: 25%;
+    height: 400px;
+    background-color: #282828;
+    border-radius: 10px;
+    box-shadow: 20px 20px 60px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    
+}
+.form-container {
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   flex-direction: column;
+}
+input{
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    width: 90%;
+    height: 55;
+    margin: 10px 0 10px 0;
+    outline: none;
+  
+}
+input[type="submit"]{
+
+    cursor: pointer;
+    margin-top: 20px;
+    color: white;
+    background-image: radial-gradient(circle at -30% 20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33% );
+}
+
+.criarConta{
+    margin-top: 20px;
+}
+
+.criarConta span{   
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+}
+.criarConta a{
+    text-decoration: none;
+    padding-left: 4px;
+    color: orange;
+    font-size: 14px;
+}
+.criarConta a:hover{
+    border-bottom: 1px solid ;
+  
+}
+validarSenha{
+    font-family: 'Courier New', Courier, monospace;
+   position: absolute;
+   left: 2rem;
+   top: 18rem;
+   color: rgb(219, 60, 60);
+   z-index: 99999;
+   
+}
