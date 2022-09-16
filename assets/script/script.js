@@ -34,7 +34,7 @@ function validarFormLogin(email, password){
    if(validarEmail === '' || validarSenha === ''){
     alert('Campos vazios')
    }
-   else{
+   if(validarEmail !== e && validarSenha !== p){
     alert("usuario não cadastrado");
    }
 }
