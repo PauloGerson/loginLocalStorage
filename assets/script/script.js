@@ -1,7 +1,10 @@
 let formulario = document.querySelector('form');
 
-function pegaDadosLogin(callback){
-    let botao = document.querySelector('#btn')
+let botao = document.querySelector('#btn')
+
+
+ function pegaDadosLogin(callback){
+   
 
     botao.addEventListener('click', function(e){ 
         e.preventDefault();
@@ -9,64 +12,44 @@ function pegaDadosLogin(callback){
         let getEmail = document.querySelector("#inputEmail").value;
         let getSenha = document.querySelector("#inputSenha").value;
       
-
+    
+        validarFormLogin(getEmail, getSenha);
     })
     
-}
+} 
 
 //Validando formLogin
 function validarFormLogin(email, password){
-    console.log("ola")
    let validarEmail = email;
    let validarSenha = password;
 
-   let e = localStorage.getItem("nome")
+   let e = localStorage.getItem("email");
+   let p = localStorage.getItem("senha");
 
-   if(validarEmail === e){
-    console.log('olá')
+
+   if(validarEmail === e && validarSenha === p){
+    console.log('ola')
+     window.location = '/assets/pages/home.html';
    }
 }
 
+pegaDadosLogin();
 
-function pegadadosCadastro(){
-    let botao = document.querySelector('#btnC')
 
-    botao.addEventListener('click', function(e){
-        e.preventDefault()
-
-        let getNome = document.querySelector('#inputNomeC').value;
-        let getSenha = document.querySelector('#inputSenhaC').value;
-        let getEmail = document.querySelector('#inputEmailC').value;
-        let getConfiSenha = document.querySelector('#inputConfiSenhaC').value;
-
-        salvaDados(getNome, getSenha, getEmail)
-        validarFormCadastro(getSenha,getConfiSenha)
+/* function validarFormCadastro(nome, email,senha, confiSenha){
     
-    })
 
-  
-}
-
-function validarFormCadastro(senha, confiSenha){
-   
-
+    let validarNome = nome;
+    let validarEmail = email;
     let validaSenha = senha;
     let validaCOnfiSenha = confiSenha;
 
-    if(validaSenha !== validaCOnfiSenha){
-        let messageSpan = document.querySelector('.validarSenha');
-        messageSpan.innerHTML = 'Senhas não conferem' 
-    }{
-       window.document.location = "wwww.google.com" ; 
-    }
-}
+   botao.addEventListener('click', function(e){
+        console.log('oi')
+   })
+} */
 
-//Salva dados no localStorage
-function salvaDados(nome,senha,email){
-    let saveNome = localStorage.setItem("nome", nome);
-    let saveSenha = localStorage.setItem("senha", senha)
-    let saveEmail = localStorage.setItem("email", email)
+    
 
-}
-//pegaDadosLogin(validarFormLogin)
-pegadadosCadastro()
+
+
