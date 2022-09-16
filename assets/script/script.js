@@ -3,16 +3,14 @@ let formulario = document.querySelector('form');
 let botao = document.querySelector('#btn')
 
 
- function pegaDadosLogin(callback){
-   
+ function pegaDadosLogin(){
 
     botao.addEventListener('click', function(e){ 
         e.preventDefault();
 
-        let getEmail = document.querySelector("#inputEmail").value;
-        let getSenha = document.querySelector("#inputSenha").value;
-      
-    
+        const getEmail = document.querySelector("#inputEmail").value;
+        const getSenha = document.querySelector("#inputSenha").value;
+        
         validarFormLogin(getEmail, getSenha);
     })
     
@@ -20,14 +18,12 @@ let botao = document.querySelector('#btn')
 
 //Validando formLogin
 function validarFormLogin(email, password){
-   let validarEmail = email;
-   let validarSenha = password;
 
-   let e = localStorage.getItem("email");
-   let p = localStorage.getItem("senha");
+   const e = localStorage.getItem("email");
+   const p = localStorage.getItem("senha");
 
 
-   if(validarEmail === e && validarSenha === p){
+   if(email === e && password === p){
     console.log('ola')
      window.location = '/assets/pages/home.html';
    }
@@ -41,22 +37,7 @@ function validarFormLogin(email, password){
    }
    
 }
-
 pegaDadosLogin();
-
-
-/* function validarFormCadastro(nome, email,senha, confiSenha){
-    
-
-    let validarNome = nome;
-    let validarEmail = email;
-    let validaSenha = senha;
-    let validaCOnfiSenha = confiSenha;
-
-   botao.addEventListener('click', function(e){
-        console.log('oi')
-   })
-} */
 
     
 
