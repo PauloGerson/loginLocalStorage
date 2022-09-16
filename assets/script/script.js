@@ -31,12 +31,15 @@ function validarFormLogin(email, password){
     console.log('ola')
      window.location = '/assets/pages/home.html';
    }
+ 
    if(validarEmail === '' || validarSenha === ''){
-    alert('Campos vazios')
+    alert('Campos vazios');
    }
+
    if(validarEmail !== e && validarSenha !== p){
     alert("usuario não cadastrado");
    }
+   
 }
 
 pegaDadosLogin();
