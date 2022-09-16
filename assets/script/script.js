@@ -30,6 +30,8 @@ function validarFormLogin(email, password){
    if(validarEmail === e && validarSenha === p){
     console.log('ola')
      window.location = '/assets/pages/home.html';
+   }else{
+    alert("usuario não cadastrado");
    }
 }
 
