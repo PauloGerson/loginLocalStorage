@@ -69,8 +69,7 @@ input[type="submit"]{
     font-size: 14px;
 }
 .criarConta a:hover{
-    border-bottom: 1px solid ;
-  
+    border-bottom: 1px solid ; 
 }
 .validarSenha{
     font-family: 'Courier New', Courier, monospace;
@@ -115,8 +114,6 @@ input[type="submit"]{
     color: white;
 }
 
-
-
 @media(max-width: 720px) {
     .form-container{
        width: 80%;
@@ -131,3 +128,22 @@ input[type="submit"]{
        width: 60%;
     }
 } 
+
+
+/* Animation */
+
+.form-container{
+    animation: fromTop 2s backwards;
+}
+
+@keyframes fromTop {
+    from{
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
