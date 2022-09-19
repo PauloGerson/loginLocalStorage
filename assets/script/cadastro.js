@@ -55,8 +55,6 @@ function pegadadosCadastro(){
     
     }
 
-
-
 function salvaDados(nome,senha,email){
     
     const saveNome = localStorage.setItem("nome", nome);
