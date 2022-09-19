@@ -11,8 +11,6 @@ function pegadadosCadastro(){
         const getConfiSenha = document.querySelector('#inputConfiSenhaC').value;
 
         const emailStorage = localStorage.getItem('email');
-        const senhaStorage = localStorage.getItem('senha');
-        const nomeStorage = localStorage.getItem('nome');
 
         if(getNome == '' || getEmail == '' || getSenha == '' || getConfiSenha == ''){
            //alert("Campos vazios");
@@ -46,7 +44,7 @@ function pegadadosCadastro(){
                 Swal.fire({
                     icon: 'info',
                     title: 'Oops...',
-                    text: 'usuario já cadastrado'
+                    text: 'Email já cadastrado'
                     
                   })
             }
