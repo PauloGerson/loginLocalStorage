@@ -2,7 +2,7 @@ const botaoC = document.querySelector('#btnC');
 
 function pegadadosCadastro(){
 
-    botaoC.addEventListener('click', (e)=>{
+    botaoC.addEventListener('click', function(e){
         e.preventDefault();
 
         const getNome = document.querySelector('#inputNomeC').value;
@@ -10,13 +10,16 @@ function pegadadosCadastro(){
         const getEmail = document.querySelector('#inputEmailC').value;
         const getConfiSenha = document.querySelector('#inputConfiSenhaC').value;
 
+        const emailStorage = localStorage.getItem('email');
+        const senhaStorage = localStorage.getItem('senha');
+        const nomeStorage = localStorage.getItem('nome');
 
-        if(getNome == '' && getEmail == ''){
+        if(getNome == '' || getEmail == '' || getSenha == '' || getConfiSenha == ''){
            //alert("Campos vazios");
            Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Campos vázios'
+            text: 'Preencha todos os campos'
             
           })
         };
@@ -26,17 +29,36 @@ function pegadadosCadastro(){
             message.innerHTML = "Senhas não conferem";
         };
         
-        if(getNome !== '' && getEmail !== '' && getSenha === getConfiSenha){
+        if(getNome !== '' && getEmail !== '' && getSenha === getConfiSenha && getSenha !== '' & getConfiSenha !== ''){
+            if(getEmail !== emailStorage){
             salvaDados(getNome, getSenha, getEmail);
-            window.location= '/index.html';
-        };
-    
+                Swal.fire({
+                    icon: 'success',
+                    text: 'Cadastro feito com sucesso'                   
+                }).then((result) =>{
+                    console.log(result)
+                    if(result.isConfirmed){
+                        window.location= '/index.html';
+                    }
+                }) 
+            }
+            else if(getEmail === emailStorage){
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Oops...',
+                    text: 'usuario já cadastrado'
+                    
+                  })
+            }
+        }
     })
+    
+    }
 
-  
-}
+
 
 function salvaDados(nome,senha,email){
+    
     const saveNome = localStorage.setItem("nome", nome);
     const saveSenha = localStorage.setItem("senha", senha)
     const saveEmail = localStorage.setItem("email", email)

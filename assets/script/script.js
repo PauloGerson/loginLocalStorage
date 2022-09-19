@@ -29,7 +29,7 @@ function validarFormLogin(email, password){
    if(email === '' && password === ''){
     //alert('Campos vazios');
     Swal.fire({
-        icon: 'error',
+        icon: 'sucess',
         title: 'Oops...',
         text: 'Campos vázios',
         position:'center'
