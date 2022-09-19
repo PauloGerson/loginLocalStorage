@@ -111,13 +111,13 @@ input[type="submit"]{
 
 
 @media(max-width: 720px) {
-    form{
+    .form-container{
        width: 80%;
     }
 
 }
 @media(max-width: 1024px) and (min-width: 721px) {
-    form{
+    .form-container{
        width: 60%;
     }
 
