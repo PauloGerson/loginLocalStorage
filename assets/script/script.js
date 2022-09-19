@@ -1,7 +1,6 @@
 
 const botao = document.querySelector('#btn')
 
-
  function pegaDadosLogin(){
 
     botao.addEventListener('click', function(e){ 
