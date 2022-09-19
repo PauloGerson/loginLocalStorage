@@ -8,10 +8,10 @@ Projeto de tela de login onde seus dados são salvos usando localStorage.
 
 > Aqui seus dados ficarão salvos em seu navegador, podendo assim logar na tela anterior.
 
-![preview](./assets/img/TELA%202.png.png)
+![preview](./assets/img/TELA%202.png)
 
 > Após feito o cadastro e logado você será direcionado para essa simples tela de Bem vindo.
-![preview](./assets/img/TELA%203.png.png)
+![preview](./assets/img/TELA%203.png)
 
 
 
