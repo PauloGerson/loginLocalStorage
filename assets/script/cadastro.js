@@ -45,7 +45,6 @@ function pegadadosCadastro(){
                     icon: 'info',
                     title: 'Oops...',
                     text: 'Email já cadastrado'
-                    
                   })
             }
         }

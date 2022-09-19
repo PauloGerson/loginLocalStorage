@@ -78,8 +78,11 @@ input[type="submit"]{
    left: 1.1rem;
    top: 18rem;
    color: rgb(219, 60, 60);
-   z-index: 99999;
+   z-index: 99;
    
+}
+.swal2-popup{
+    z-index: 99999999;
 }
 
 .nameStorage{
