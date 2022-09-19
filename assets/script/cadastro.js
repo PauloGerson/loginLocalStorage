@@ -12,7 +12,13 @@ function pegadadosCadastro(){
 
 
         if(getNome == '' && getEmail == ''){
-           alert("Campos vazios");
+           //alert("Campos vazios");
+           Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Campos vázios'
+            
+          })
         };
 
         if(getSenha !== getConfiSenha){

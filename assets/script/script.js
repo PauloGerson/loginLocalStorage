@@ -29,11 +29,23 @@ function validarFormLogin(email, password){
    }
  
    if(validarEmail === '' || validarSenha === ''){
-    alert('Campos vazios');
+    //alert('Campos vazios');
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Campos vázios'
+        
+      })
    }
 
    if(validarEmail !== e && validarSenha !== p){
-    alert("usuario não cadastrado");
+    //alert("usuario não cadastrado");
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Usuarios não cadastrados'
+        
+      })
    }
    
 }
