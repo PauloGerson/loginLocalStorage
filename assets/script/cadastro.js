@@ -1,14 +1,14 @@
-let botaoC = document.querySelector('#btnC');
+const botaoC = document.querySelector('#btnC');
 
 function pegadadosCadastro(){
 
     botaoC.addEventListener('click', (e)=>{
         e.preventDefault();
 
-        let getNome = document.querySelector('#inputNomeC').value;
-        let getSenha = document.querySelector('#inputSenhaC').value;
-        let getEmail = document.querySelector('#inputEmailC').value;
-        let getConfiSenha = document.querySelector('#inputConfiSenhaC').value;
+        const getNome = document.querySelector('#inputNomeC').value;
+        const getSenha = document.querySelector('#inputSenhaC').value;
+        const getEmail = document.querySelector('#inputEmailC').value;
+        const getConfiSenha = document.querySelector('#inputConfiSenhaC').value;
 
 
         if(getNome == '' && getEmail == ''){
@@ -22,7 +22,7 @@ function pegadadosCadastro(){
         };
 
         if(getSenha !== getConfiSenha){
-            let message = document.querySelector('.validarSenha');
+            const message = document.querySelector('.validarSenha');
             message.innerHTML = "Senhas não conferem";
         };
         
@@ -36,12 +36,10 @@ function pegadadosCadastro(){
   
 }
 
-
 function salvaDados(nome,senha,email){
-    let saveNome = localStorage.setItem("nome", nome);
-    let saveSenha = localStorage.setItem("senha", senha)
-    let saveEmail = localStorage.setItem("email", email)
-
+    const saveNome = localStorage.setItem("nome", nome);
+    const saveSenha = localStorage.setItem("senha", senha)
+    const saveEmail = localStorage.setItem("email", email)
 }
 
 pegadadosCadastro();

@@ -1,5 +1,5 @@
 
-let botao = document.querySelector('#btn')
+const botao = document.querySelector('#btn')
 
 
  function pegaDadosLogin(){
