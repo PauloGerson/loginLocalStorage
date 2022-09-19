@@ -5,34 +5,32 @@
     font-family: 'DM Sans', sans-serif;
 }
 body{
+    width: 100%;
     background-image: radial-gradient(circle at 50% -20.71%, #e6f58f 0, #e9eb7f 10%, #ecdf6e 20%, #efd25d 30%, #f1c44d 40%, #f2b53c 50%, #f3a52d 60%, #f59522 70%, #f8851d 80%, #fa741e 90%, #fc6324 100%);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-
+   
 }
 main{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
 }
 
-form{
-    width: 25%;
-    height: 400px;
-    background-color: #282828;
-    border-radius: 10px;
-    box-shadow: 20px 20px 60px 30px rgba(0, 0, 0, 0.2);
-    position: relative;
-    
-}
 .form-container {
    display: flex;
    justify-content: center;
    align-items: center; 
    flex-direction: column;
+   width: 25%;
+   height: 400px;
+   background-color: #282828;
+   border-radius: 10px;
+   box-shadow: 20px 20px 60px 30px rgba(0, 0, 0, 0.2);
+   position: relative;
+   
 }
 input{
     border: none;
@@ -64,7 +62,7 @@ input[type="submit"]{
 .criarConta a{
     text-decoration: none;
     padding-left: 4px;
-    color: orange;
+    color: rgb(255, 166, 0);
     font-size: 14px;
 }
 .criarConta a:hover{
@@ -105,6 +103,10 @@ input[type="submit"]{
 .nameStorage a{
     text-decoration: none;
     color: white;
+}
+
+.swal2-container swal2-popup{
+   background-color: red;
 }
 
 @media(max-width: 720px) {
