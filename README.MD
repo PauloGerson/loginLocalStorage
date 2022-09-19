@@ -11,6 +11,7 @@ Projeto de tela de login onde seus dados são salvos usando localStorage.
 ![preview](./assets/img/TELA%202.png)
 
 > Após feito o cadastro e logado você será direcionado para essa simples tela de Bem vindo.
+
 ![preview](./assets/img/TELA%203.png)
 
 
@@ -21,8 +22,8 @@ Projeto de tela de login onde seus dados são salvos usando localStorage.
 
 - HTML
 - CSS
-- Js
-- lib SweetAlert2
+- JS
+- Lib SweetAlert2
 - GIT e Github
 
 # ❤ Contato
